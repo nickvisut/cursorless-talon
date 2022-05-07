@@ -1,8 +1,9 @@
-from typing import Any, Union
-from ..paired_delimiter import paired_delimiters_map
-from talon import Module, actions, app, Context
-from ..csv_overrides import init_csv_and_watch_changes
+from typing import Any
 
+from talon import Context, Module, actions, app
+
+from ..csv_overrides import init_csv_and_watch_changes
+from ..paired_delimiter import paired_delimiters_map
 
 mod = Module()
 
@@ -21,7 +22,7 @@ tag: user.cursorless_experimental_snippets
 
 
 # NOTE: Please do not change these dicts.  Use the CSVs for customization.
-# See https://github.com/cursorless-dev/cursorless-vscode/blob/main/docs/user/customization.md
+# See https://www.cursorless.org/docs/user/customization/
 wrapper_snippets = {
     "else": "ifElseStatement.alternative",
     "if else": "ifElseStatement.consequence",

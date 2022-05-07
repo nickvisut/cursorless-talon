@@ -1,7 +1,9 @@
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
-from talon import Module, actions, app, Context, fs, cron
+
+from talon import Context, Module, actions, app, cron, fs
+
 from ..csv_overrides import init_csv_and_watch_changes
 from .lines_number import DEFAULT_DIRECTIONS
 
@@ -13,7 +15,7 @@ mod.list("cursorless_hat_color", desc="Supported hat colors for cursorless")
 mod.list("cursorless_hat_shape", desc="Supported hat shapes for cursorless")
 
 # NOTE: Please do not change these dicts.  Use the CSVs for customization.
-# See https://github.com/cursorless-dev/cursorless-vscode/blob/main/docs/user/customization.md
+# See https://www.cursorless.org/docs/user/customization/
 hat_colors = {
     "blue": "blue",
     "green": "green",
@@ -65,7 +67,7 @@ class CustomizableTerm:
 
 
 # NOTE: Please do not change these dicts.  Use the CSVs for customization.
-# See https://github.com/cursorless-dev/cursorless-vscode/blob/main/docs/user/customization.md
+# See https://www.cursorless.org/docs/user/customization/
 special_marks = [
     CustomizableTerm("this", "currentSelection", {"mark": {"type": "cursor"}}),
     CustomizableTerm("that", "previousTarget", {"mark": {"type": "that"}}),
