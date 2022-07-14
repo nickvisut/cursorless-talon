@@ -1,0 +1,1 @@
+toggle hats: user.vscode("cursorless.toggleDecorations")
